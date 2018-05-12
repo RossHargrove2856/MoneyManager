@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Add Account";
+}
+
+@model MoneyManager.Models.AccountViewModel
+
+<div>
+    <h5>Add an Account</h5>
+    <form asp-controller="Accounts" asp-action="CreateAccount" method="POST">
+        <span asp-validation-for="AccountName"></span>
+        <label asp-for="AccountName"></label>
+        <input asp-for="AccountName">
+        <span asp-validation-for="Balance"></span>
+        <label asp-for="Balance"></label>
+        <input asp-for="Balance" type="number" min="0.00" step="0.01">
+        <button type="submit">Add Account</button>
+    </form>
+</div>

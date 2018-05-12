@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+@model MoneyManager.Models.LoginViewModel
+
+<div class="container">
+    <h5>Log In</h5>
+    <form asp-controller="Users" asp-action="Login" method="POST">
+        <span asp-validation-for="UserName"></span>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName">
+        <span asp-validation-for="Password"></span>
+        <label asp-for="Password"></label>
+        <input asp-for="Password">
+        <button type="submit">Log In</button>
+    </form>
+</div>

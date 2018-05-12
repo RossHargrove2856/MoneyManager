@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Accounts";
+}
+
+@model MoneyManager.Models.TransactionViewModel
+
+<div>
+    <div class="row d-flex">
+        <h3 class="mr-auto p-2">Welcome @ViewBag.User.FirstName</h3>
+        <a href="/Accounts/Add" class="p-2">Add Account</a>
+    </div>
+    <div>
+        @if(@ViewBag.User.Accounts != null)
+        {
+            <h5>Here are your accounts</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Account Name</th>
+                        <th scope="col">Account Balance</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                @foreach(var account in @ViewBag.User.Accounts)
+                {
+                    <tr>
+                        <td><a href="/Account/@account.AccountId">@account.AccountName</a></td>
+                        <td>@account.Balance</td>
+                        <td>
+                            <form asp-controller="Accounts" asp-action="DeleteAccount" method="POST">
+                                <input asp-for="AccountId" type="hidden" value="@account.AccountId">
+                                <button type="submit">Delete this account</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <h5>You have no accounts added yet.</h5>
+            <a href="/Accounts/Add">Add Account Now</a>
+        }
+    </div>
+</div>

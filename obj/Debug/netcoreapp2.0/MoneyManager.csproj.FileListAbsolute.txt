@@ -1,0 +1,10 @@
+/Users/RossHargrove/Desktop/CodingDojo_C#/ASP.NET_ORMs/entity/MoneyManager/bin/Debug/netcoreapp2.0/MoneyManager.deps.json
+/Users/RossHargrove/Desktop/CodingDojo_C#/ASP.NET_ORMs/entity/MoneyManager/bin/Debug/netcoreapp2.0/MoneyManager.runtimeconfig.json
+/Users/RossHargrove/Desktop/CodingDojo_C#/ASP.NET_ORMs/entity/MoneyManager/bin/Debug/netcoreapp2.0/MoneyManager.runtimeconfig.dev.json
+/Users/RossHargrove/Desktop/CodingDojo_C#/ASP.NET_ORMs/entity/MoneyManager/bin/Debug/netcoreapp2.0/MoneyManager.dll
+/Users/RossHargrove/Desktop/CodingDojo_C#/ASP.NET_ORMs/entity/MoneyManager/bin/Debug/netcoreapp2.0/MoneyManager.pdb
+/Users/RossHargrove/Desktop/CodingDojo_C#/ASP.NET_ORMs/entity/MoneyManager/obj/Debug/netcoreapp2.0/MoneyManager.csproj.CoreCompileInputs.cache
+/Users/RossHargrove/Desktop/CodingDojo_C#/ASP.NET_ORMs/entity/MoneyManager/obj/Debug/netcoreapp2.0/MoneyManager.AssemblyInfoInputs.cache
+/Users/RossHargrove/Desktop/CodingDojo_C#/ASP.NET_ORMs/entity/MoneyManager/obj/Debug/netcoreapp2.0/MoneyManager.AssemblyInfo.cs
+/Users/RossHargrove/Desktop/CodingDojo_C#/ASP.NET_ORMs/entity/MoneyManager/obj/Debug/netcoreapp2.0/MoneyManager.dll
+/Users/RossHargrove/Desktop/CodingDojo_C#/ASP.NET_ORMs/entity/MoneyManager/obj/Debug/netcoreapp2.0/MoneyManager.pdb

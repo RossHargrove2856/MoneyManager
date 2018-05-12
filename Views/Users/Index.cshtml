@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model MoneyManager.Models.RegisterViewModel
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3 class="display">Welcome to MoneyManager, The app that makes financial planning easy.</h3>
+            <h6>Already Registered? <a href="/Login">Log In Here</a></h6>
+        </div>
+        <div class="col">
+            <h5>New Users Register</h5>
+            <div asp-validation-summary="All"></div>
+            <form asp-controller="Users" asp-action="Register" method="POST">
+                <span asp-validation-for="FirstName"></span>
+                <div class="form-group-row">
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName">
+                </div>
+                <span asp-validation-for="LastName"></span>
+                <div class="form-group-row">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName">
+                </div>
+                <span asp-validation-for="UserName"></span>
+                <div class="form-group-row">
+                    <label asp-for="UserName"></label>
+                    <input asp-for="UserName">
+                </div>
+                <span asp-validation-for="Email"></span>
+                <div class="form-group-row">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email">
+                </div>
+                <span asp-validation-for="Password"></span>
+                <div class="form-group-row">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password">
+                </div>
+                <span asp-validation-for="ConfirmPassword"></span>
+                <div class="form-group-row">
+                    <label asp-for="ConfirmPassword"></label>
+                    <input asp-for="ConfirmPassword">
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
+    </div>
+</div>

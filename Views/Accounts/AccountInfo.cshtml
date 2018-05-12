@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Account Information";
+}
+
+@model MoneyManager.Models.TransactionViewModel
+
+<div class="container">
+    <div class="row">
+        <h5>@ViewBag.Account.AccountName</h5>
+        <span>@ViewBag.Account.Balance</span>
+        <form asp-controller="Accounts" asp-action="DeleteAccount" method="POST">
+            <input asp-for="AccountId" type="hidden" value="@ViewBag.Account.AccountId">
+            <button type="submit">Delete this account</button>
+        </form>
+    </div>
+    <div class="row">
+        <h6>Transactions in this account</h6>
+        <form asp-controller="Accounts" asp-action="Transaction" method="POST">
+            <span asp-validation-for="TransactionAmount"></span>
+            <label asp-for="TransactionAmount"></label>
+            <input asp-for="TransactionAmount" type="number" step="0.01">
+            <input asp-for="AccountId" type="hidden" value="@ViewBag.Account.AccountId">
+            <button type="submit">Make Transaction</button>
+        </form>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Transaction Amount</th>
+                <th>Transaction Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var transaction in @ViewBag.Account.Transactions)
+            {
+                <tr>
+                    <td>@transaction.TransactionAmount</td>
+                    <td>@transaction.TransDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
